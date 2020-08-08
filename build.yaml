@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      fast_orm|entity_generator:
+        enabled: true
+
+builders:
+  entity_generator:
+    import: "package:fast_orm/dao_generator.dart"
+    builder_factories: ["entityGenerator"]
+    build_extensions: {".dart": [".dao.part"]}
+    auto_apply: root_package
+    build_to: source
+    applies_builders: ["source_gen|combining_builder"]
