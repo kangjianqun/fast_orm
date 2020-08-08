@@ -8,7 +8,6 @@ import 'package:source_gen/source_gen.dart';
 import 'dao.dart';
 import 'src/field_helpers.dart';
 import 'src/utils.dart';
-import 'template.dart';
 
 /// flutter packages pub run build_runner build
 Builder entityGenerator(BuilderOptions options) =>
@@ -61,7 +60,7 @@ class _GeneratorHelper extends HelperCore {
     String tableProperty = "";
     String sqlTable = "";
 
-    /// 检查JSON注释是否存在重复的冲突。
+    /// 检查注释是否存在重复的冲突。
     /// 我们现在这样做，因为在任何修剪完成后，我们有一个最终的字段列表
     accessibleFieldSet.fold(
       <String>{},
@@ -101,7 +100,7 @@ class _GeneratorHelper extends HelperCore {
       'entityName': entityName,
       'tableName': annotation.peek("name")?.stringValue,
       "propertyList": "${json.encode(propertyList)}",
-      "source": _getSource(element.source.fullName.substring(1)),
+      "source": element.source.shortName,
       "toMap": toMap + "return map;",
       "formMap": formMap + "return entity;",
       "createSql": sqlTable,
@@ -109,7 +108,4 @@ class _GeneratorHelper extends HelperCore {
       "propertyClass": tableProperty
     });
   }
-
-  ///获取要生成的文件的路径
-  String _getSource(String fullName) => fullName.replaceAll("/lib", "");
 }

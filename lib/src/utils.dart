@@ -2,7 +2,6 @@ import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:fast_orm/dao.dart';
 import 'package:source_gen/source_gen.dart';
-import 'package:meta/meta.dart';
 
 const _dbPropertyChecker = TypeChecker.fromRuntime(DBProperty);
 
@@ -44,12 +43,6 @@ ConstantReader dbPropertyAnnotation(FieldElement element) =>
 /// Returns `true` if [element] is annotated with [DBProperty].
 bool hasDbPropertyAnnotation(FieldElement element) =>
     _dbPropertyAnnotation(element) != null;
-
-@alwaysThrows
-void throwUnsupported(FieldElement element, String message) =>
-    throw InvalidGenerationSourceError(
-        'Error with `@JsonKey` on `${element.name}`. $message',
-        element: element);
 
 /// 返回[value]的带引号的字符串文字，该文字可以在生成的Dart代码中使用
 String escapeDartString(String value) {

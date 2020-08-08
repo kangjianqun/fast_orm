@@ -1,14 +1,19 @@
 # fast_orm
 
-A new Flutter ORM package.
+一个 sqflite 的 ORM 扩展库 还在完善中，demo制作中，文章后期会补充,会一直更新，希望支持一下.有问题可以反馈QQ 275918180。
 
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+<center>谢谢支持，请作者喝咖啡。 </center>
+<table>
+    <tr>
+        <td >
+        <center>
+        <img src="https://img-blog.csdnimg.cn/2020062212024598.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E5NDgxODI5NzQ=,size_16,color_FFFFFF,t_70" >
+        </center>
+        </td>
+        <td >
+        <center>
+        <img src="https://img-blog.csdnimg.cn/20200622121147113.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3E5NDgxODI5NzQ=,size_16,color_FFFFFF,t_70"  >
+        </center>
+        </td>
+    </tr>
+</table>

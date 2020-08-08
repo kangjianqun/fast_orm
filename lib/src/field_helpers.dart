@@ -21,11 +21,11 @@ class _FieldSet implements Comparable<_FieldSet> {
     /// 排序时，将class字段优先于继承字段。
     final sortField = fields.first;
 
-    /// 如果有的话，最好使用用`JsonKey`注释的字段。 如果不是，请使用class字段。
-    final fieldHasJsonKey =
+    /// 如果有的话，最好使用用[DBProperty]注释的字段。 如果不是，请使用class字段。
+    final fieldHasDBProperty =
         fields.firstWhere(hasDbPropertyAnnotation, orElse: () => fields.first);
 
-    return _FieldSet._(fieldHasJsonKey, sortField);
+    return _FieldSet._(fieldHasDBProperty, sortField);
   }
 
   @override

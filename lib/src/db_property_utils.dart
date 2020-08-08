@@ -13,7 +13,7 @@ DBProperty _from(FieldElement element) {
   /// 如果 element 上存在注解，则源为real字段。如果结果是null，请检查getter–它是一个属性。
   final obj = dbPropertyAnnotation(element);
   ConstantReader _type = ConstantReader(obj.read("type").objectValue);
-  return _populateJsonKey(
+  return _populateDbProperty(
     element,
     name: obj.read('name').literalValue as String,
     isPrimary: obj.read("isPrimary").literalValue as bool,
@@ -25,7 +25,7 @@ DBProperty _from(FieldElement element) {
   );
 }
 
-DBProperty _populateJsonKey(
+DBProperty _populateDbProperty(
   FieldElement element, {
   String name,
   bool isPrimary,

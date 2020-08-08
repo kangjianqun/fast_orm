@@ -1,8 +1,8 @@
 name: fast_orm
-description: A new Flutter ORM package.
+description: This is an ORM package of secondary encapsulation sqflite, which provides the convenience of rapid development
 version: 1.0.0
 author: kang_1994@outlook.com
-homepage:
+homepage: https://github.com/StrangerKjq/fast_orm
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -16,6 +16,8 @@ dependencies:
   build_config: ^0.4.2
   mustache4dart: ^3.0.0-dev.0.0
   build: ^1.3.0
+  analyzer: ^0.39.12
+  path: ^1.7.0
 
 
 dev_dependencies:

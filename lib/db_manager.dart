@@ -67,7 +67,5 @@ class DBManager {
     return path;
   }
 
-  void close() {
-    db.close();
-  }
+  void close() => db?.close();
 }

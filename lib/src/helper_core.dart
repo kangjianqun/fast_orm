@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:fast_orm/dao.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/widgets.dart';
 import 'package:source_gen/source_gen.dart';
 
 import 'db_property_utils.dart';
